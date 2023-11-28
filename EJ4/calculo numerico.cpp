@@ -25,7 +25,7 @@ int main() {
     std::cout << "Suma: " << suma << std::endl;
     std::cout << "Media: " << media << std::endl;
 
-    
+
     auto agregarValor = [](double& valor) { valor += 5.0; };
     std::for_each(std::begin(valores), std::end(valores), agregarValor);
 
@@ -33,3 +33,16 @@ int main() {
     std::for_each(std::begin(valores), std::end(valores), [](double valor) {
         imprimirElemento(valor);
     });
+
+    std::cout << std::endl;
+
+
+    std::valarray<double> valoresTranspuesto = valores.transpose();
+    std::cout << "Valores transpuestos: ";
+    std::for_each(std::begin(valoresTranspuesto), std::end(valoresTranspuesto), [](double valor) {
+        imprimirElemento(valor);
+    });
+    std::cout << std::endl;
+
+    return 0;
+}
