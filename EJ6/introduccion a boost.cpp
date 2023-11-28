@@ -17,4 +17,10 @@ public:
     }
 };
 
+class Cubo : public Transformacion {
+public:
+    int aplicar(int num) const override {
+        return num * num * num;
+    }
+};
 
