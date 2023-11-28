@@ -24,3 +24,21 @@ public:
     }
 };
 
+class EstrategiaContainer {
+private:
+    std::shared_ptr<Transformacion> estrategia;
+
+public:
+    void setEstrategia(const std::shared_ptr<Transformacion>& nuevaEstrategia) {
+        estrategia = nuevaEstrategia;
+    }
+
+    int aplicarEstrategia(int num) const {
+        if (estrategia) {
+            return estrategia->aplicar(num);
+        }
+        return num;
+    }
+};
+
+
