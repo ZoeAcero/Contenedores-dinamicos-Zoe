@@ -9,7 +9,7 @@ int main() {
     }
 
     for (const auto &numero : numeros) {
-       
+
         auto imprimirDoble = [](int n) {
             std::cout << "El doble de " << n << " es " << n * 2 << std::endl;
         };
