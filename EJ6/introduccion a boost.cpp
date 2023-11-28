@@ -7,4 +7,14 @@
 class Transformacion {
 public:
     virtual int aplicar(int num) const = 0;
-    virtual ~Transformacion() = default; 
+    virtual ~Transformacion() = default;
+};
+
+class Cuadrado : public Transformacion {
+public:
+    int aplicar(int num) const override {
+        return num * num;
+    }
+};
+
+
