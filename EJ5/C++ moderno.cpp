@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
+#include <algorithm>
 
 
 class Transformacion {
@@ -31,3 +32,9 @@ int main() {
     std::for_each(numeros.begin(), numeros.end(), [](int num) {
         imprimirElemento(num, "Elemento: ");
     });
+
+    std::shared_ptr<Transformacion> ptrTransformacion = std::make_shared<Cuadrado>();
+    std::cout << "Cuadrado de 3 usando puntero compartido: " << ptrTransformacion->aplicar(3) << std::endl;
+
+    return 0;
+}
