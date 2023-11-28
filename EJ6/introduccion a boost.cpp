@@ -41,4 +41,17 @@ public:
     }
 };
 
+int main() {
+
+    EstrategiaContainer contenedor;
+
+    std::cout << "Cuadrado de 3 usando puntero compartido: " << contenedor.aplicarEstrategia(3) << std::endl;
+
+    contenedor.setEstrategia(std::make_shared<Cubo>());
+    std::cout << "Cubo de 3 usando puntero compartido: " << contenedor.aplicarEstrategia(3) << std::endl;
+    
+
+    return 0;
+}
+
 
