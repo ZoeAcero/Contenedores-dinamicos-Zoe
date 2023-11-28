@@ -26,7 +26,7 @@ int main() {
     imprimirElemento(*minElement, "Número mínimo: ");
     imprimirElemento(*maxElement, "Número máximo: ");
 
-   
+
     std::cout << "Elementos en orden inverso con iteradores inversos:" << std::endl;
     for (auto it = std::prev(numeros.end()); it != std::prev(numeros.begin()); --it) {
         imprimirElemento(*it);
